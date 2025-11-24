@@ -4,36 +4,49 @@ import { IoIosTrendingUp, IoMdHome } from "react-icons/io";
 import { FaMicrochip } from "react-icons/fa6";
 import { FiMap } from "react-icons/fi";
 
-const navbar = () => {
+const Navbar = () => {
   return (
-    <div className="bg-white ">
-      <div className="flex space-x-3">
-        <img src={image} alt="" className="w-20 p-3" />
-        <div>
-          <h1 className="text-3xl font-bold mt-4">Codolog</h1>
-          <p className="text-[11px] text-gray-400  -mt-2">
-            Always learn unique
-          </p>
+    <div className="bg-white w-full shadow-sm">
+      <div className="flex flex-wrap items-center justify-between px-4 py-3">
+
+        {/* Logo */}
+        <div className="flex items-center space-x-2">
+          <img src={image} alt="" className="w-16" />
+          <div>
+            <h1 className="text-2xl md:text-3xl font-bold">Codolog</h1>
+            <p className="text-[11px] text-gray-400 -mt-1">
+              Always learn unique
+            </p>
+          </div>
         </div>
-        <div className="flex items-center border-2 border-black h-12 rounded-4xl mt-4 ml-10 w-80 ">
-          <FaSearch className="h-full ml-12 font-light" />
+
+        {/* Search Box */}
+        <div className="flex items-center border border-gray-400 rounded-full px-3 py-1 w-full md:w-80 mt-3 md:mt-0">
+          <FaSearch className="text-gray-500" />
           <input
             type="text"
-            className="h-full ml-5  focus:outline-0"
-            placeholder="what you want to learn"
+            className="ml-2 w-full focus:outline-none"
+            placeholder="What you want to learn"
           />
         </div>
-        <div className="flex space-x-9   text-3xl mt-6 ml-30">
+
+        {/* Icons */}
+        <div className="flex space-x-6 text-xl md:text-2xl mt-3 md:mt-0">
           <IoMdHome />
           <IoIosTrendingUp />
           <FaMicrochip />
           <FiMap />
           <FaGraduationCap />
         </div>
-        <button className="border-3 border-blue-700 h-10 w-35 rounded-full text-blue-700 font-bold m-5 ml-15">Explore Courses </button>
+
+        {/* Button */}
+        <button className="border border-blue-700 px-4 py-2 rounded-full text-blue-700 font-semibold mt-3 md:mt-0">
+          Explore Courses
+        </button>
+
       </div>
     </div>
   );
 };
 
-export default navbar;
+export default Navbar;
